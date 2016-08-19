@@ -15,5 +15,6 @@ global.LOGPATH = './logFiles/logfile.log'; // path and log file name
 // 0 for information (blue)
 // 1 for warning (yellow)
 // 2 for error (red)
+const logger = require("simple-logger-pkg");
 logger.debug("your message", 0); 
 ```
