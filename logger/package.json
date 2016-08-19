@@ -2,7 +2,7 @@
   "name": "simple-logger-pkg",
   "version": "1.0.7",
   "description": "Simple logger",
-  "main": "logger.js",
+  "main": "index.js",
   "author": "Angel Valdes",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.1.2" 
+    "colors": "^1.1.2"
   }
 }
