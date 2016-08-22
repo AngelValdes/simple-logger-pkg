@@ -17,3 +17,5 @@ describe('test logger', () => { //to be implemented
         //expect('testValue').toBe('testValue');
     });
 });
+
+//This is a updated note to Angel's project
