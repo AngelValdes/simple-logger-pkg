@@ -1,6 +1,6 @@
 {
   "name": "simple-logger-pkg",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Simple logger utility to log to console and log file. It depends on colors package. for more information go to (https://github.com/AngelValdes/simple-logger-pkg)",
   "main": "index.js",
   "author": "Angel Valdes",
