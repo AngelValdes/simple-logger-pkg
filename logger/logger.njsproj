@@ -33,7 +33,6 @@
     <Compile Include="index.js" />
     <Compile Include="test\__index.js" />
     <Content Include=".eslintrc.json" />
-    <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
