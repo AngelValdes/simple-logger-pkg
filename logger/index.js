@@ -6,6 +6,7 @@ const fs = require('fs');
 
 const path = global.LOGPATH; // './logs/logfile.log';
 // date time functionality
+//adding note to Angel's project
 const datetime = new Date();
 // log levels
 const levels = [
@@ -58,3 +59,5 @@ exports.debug = (message, level) => {
             });
     }
 };
+
+//This is a updated note to Angel's project
