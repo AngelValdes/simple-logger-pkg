@@ -33,21 +33,24 @@ fs.stat(path, (err) => { // I know this parameter is not used, but I left it the
     }
 });
 exports.debug = (message, level) => {
+    var result = message + ' not printed';
     if (global.DEBUG === true) {
-        // log to console and write to file
-        // display message on console in color
+        // write to console message in color
         switch (levels[level].color) {
             case 'blue':
                 console.log(colors.blue.bgWhite(message));
+                result = message + ' printed as ' + levels[level].type;
                 break;
             case 'yellow':
                 console.log(colors.yellow.bgWhite(message));
+                result = message + ' printed as ' + levels[level].type;
                 break;
             case 'red':
                 console.log(colors.red.bgWhite(message));
+                result = message + ' printed as ' + levels[level].type;
                 break;
             default:
-                console.log(colors.blue.bgWhite(message));
+                break;
         }
         // append message to logfile
         fs.appendFile(path, '\n - at: ' + datetime.toLocaleTimeString() + ' ' +
@@ -57,4 +60,5 @@ exports.debug = (message, level) => {
                 }
             });
     }
+    return result;
 };
