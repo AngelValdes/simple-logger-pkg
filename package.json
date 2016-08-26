@@ -21,8 +21,18 @@
     "eslint-plugin-react": "^6.1.2",
     "expect": "^1.20.2",
     "faker": "^3.1.0",
+    "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
     "mocha": "^2.5.3",
     "supertest": "^2.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/judia/simple-logger-pkg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/judia/simple-logger-pkg/issues"
+  },
+  "homepage": "https://github.com/judia/simple-logger-pkg#readme"
 }

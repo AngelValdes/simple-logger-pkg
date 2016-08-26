@@ -1,20 +1,21 @@
 const fs = require('fs');
 
 const path = global.LOGPATH;
+
 const datetime = new Date();
-// log levels
 const levels = [
-    { level: 0, type: 'information', color: 'blue' },
-    { level: 1, type: 'warning', color: 'yellow' },
-    { level: 2, type: 'error', color: 'red' },
+  { level: 0, type: 'information', color: 'blue' },
+  { level: 1, type: 'warning', color: 'yellow' },
+  { level: 2, type: 'error', color: 'red' },
 ];
+
 // console colors
 const colors = require('colors');
 
 // check for log file existance, if not exists, initialize it with date
 fs.stat(path, (err) => { // I know this parameter is not used, but I left it there as reminder
     if (err === null) {
-        console.log('The log file already exists, logger initialized!');
+        Console.log('The log file already exists, logger initialized!');
     } else {
         // create log file with date and time
         fs.writeFile(path, 'Log file Initialized on ' + datetime,
