@@ -1,11 +1,6 @@
-﻿/* eslint no-console: 0 */ // requested functionality by instructor in this module
-// logger utility module
-//----------------------------------------------------------------------
-// use file system
 const fs = require('fs');
 
-const path = global.LOGPATH; // './logs/logfile.log';
-// date time functionality
+const path = global.LOGPATH;
 const datetime = new Date();
 // log levels
 const levels = [
