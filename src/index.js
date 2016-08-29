@@ -32,7 +32,7 @@ fs.stat(path, (err) => { // I know this parameter is not used, but I left it the
         );
     }
 });
-exports.debug = (message, level) => {
+module.exports.debug = (message, level) => {
     var result = message + ' not printed';
     if (global.DEBUG === true) {
         // write to console message in color
