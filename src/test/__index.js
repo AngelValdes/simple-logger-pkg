@@ -1,6 +1,5 @@
 ﻿const assert = require('assert');
 const utility = require('../index');
-var expect = require('chai').expect;
 
 describe('test utility.debug()', () => {
     global.DEBUG = true;
