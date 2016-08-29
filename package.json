@@ -1,6 +1,6 @@
 {
   "name": "simple-logger-pkg",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Simple logger utility to log to console and log file. It depends on colors package. for more information go to (https://github.com/AngelValdes/simple-logger-pkg)",
   "main": "src/index.js",
   "author": "Angel Valdes",
@@ -13,12 +13,14 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.1.2"  
+    "colors": "^1.1.2"
   },
-   "devDependencies": {
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
     "eslint": "^3.4.0",
-    "eslint-plugin-import":"^1.13.0",
     "eslint-config-airbnb": "^10.0.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-import": "^1.13.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.1.0"
   }

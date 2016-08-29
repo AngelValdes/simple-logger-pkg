@@ -2,8 +2,8 @@
 // logger utility module
 //----------------------------------------------------------------------
 // use file system
-const fs = require('fs');
-
+const fs = require('fs'); 
+var x = 3
 const path = global.LOGPATH; // './logs/logfile.log';
 // date time functionality
 const datetime = new Date();
