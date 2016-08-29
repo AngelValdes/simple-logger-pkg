@@ -7,14 +7,20 @@ npm install simple-logger-pkg --save
 #### You also need to create two variables in the application global scope:
 ```
 global.DEBUG = true; // to enable or disable logging
-global.LOGPATH = './logFiles/logfile.log'; // path and log file name 
 ```
-#### Note: Make sure the directory path exist in your app for the log, if it does not, create the directory. the file will be created automatically in that directory.
-#### The logfile.log will contain three levels of messages: information, warnings, and errors. you can select level of messages by passing it on the call. ex:
+#### Two funcitons:
+1. debug() to produce a log message on the console, The log messages will contain three levels of messages: information, warnings, and errors. you can select level of messages by passing it on the call. ex:
+2. versionUp() to increase a Semantic version based on the input previous version and the version type (Major, Minor, Patch)
 ```
+// logs type:
 // 0 for information (blue)
 // 1 for warning (yellow)
 // 2 for error (red)
-const logger = require("simple-logger-pkg");
-logger.debug("your message", 0); 
+
+// versions type:
+// Major, Minor, Patch
+
+const utility = require("simple-logger-pkg");
+utility.debug("your message", 0); 
+var newVersion = utility.versionUp("1.0.2", "Major") //will return "2.0.2"
 ```
