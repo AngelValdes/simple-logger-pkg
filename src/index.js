@@ -1,8 +1,6 @@
 ﻿/* eslint no-console: 0 */ // requested functionality by instructor in this module
 // utility module
->>>>>>> fa3e9292e61486695d0f39901873989e166bb460
-// date time functionality
-const datetime = new Date();
+
 // log levels
 const levels = [
     { level: 0, type: 'information', color: 'blue' },
