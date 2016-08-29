@@ -1,10 +1,6 @@
 ﻿/* eslint no-console: 0 */ // requested functionality by instructor in this module
-// logger utility module
-//----------------------------------------------------------------------
-// use file system
-const fs = require('fs'); 
-var x = 3
-const path = global.LOGPATH; // './logs/logfile.log';
+// utility module
+>>>>>>> fa3e9292e61486695d0f39901873989e166bb460
 // date time functionality
 const datetime = new Date();
 // log levels
@@ -16,22 +12,6 @@ const levels = [
 // console colors
 const colors = require('colors');
 
-// check for log file existance, if not exists, initialize it with date
-fs.stat(path, (err) => { // I know this parameter is not used, but I left it there as reminder
-    if (err === null) {
-        console.log('The log file already exists, logger initialized!');
-    } else {
-        // create log file with date and time
-        fs.writeFile(path, 'Log file Initialized on ' + datetime,
-            (erro) => {
-                if (erro) {
-                    return console.log(erro);
-                }
-                return console.log('The log file was created, logger initialized!');
-            }
-        );
-    }
-});
 module.exports.debug = (message, level) => {
     var result = message + ' not printed';
     if (global.DEBUG === true) {
@@ -51,14 +31,25 @@ module.exports.debug = (message, level) => {
                 break;
             default:
                 break;
-        }
-        // append message to logfile
-        fs.appendFile(path, '\n - at: ' + datetime.toLocaleTimeString() + ' ' +
-            levels[level].type + '(' + levels[level].color + '): ' + message, (err) => {
-                if (err) {
-                    console.log('Error appending to log: ' + err);// if error appending, log to console
-                }
-            });
+        }       
+    }
+    return result;
+};
+module.exports.versionUp = function versionUp(current, type) { //expected usage: logger.versionUp("1.0.2", "Major")
+    var result;
+    var arrayOfNumbers = current.split('.');
+    switch (type) {
+        case 'Major':
+            result = String(parseInt(arrayOfNumbers[0]) + 1) + "." + arrayOfNumbers[1] + "." + arrayOfNumbers[2];
+            break;
+        case 'Minor':
+            result = arrayOfNumbers[0] + "." + String(parseInt(arrayOfNumbers[1]) + 1) + "." + arrayOfNumbers[2];
+            break;
+        case 'Patch':
+            result = arrayOfNumbers[0] + "." + arrayOfNumbers[1] + "." + String(parseInt(arrayOfNumbers[2]) + 1);
+            break;
+        default:
+            result = "Invalid input arguments";
     }
     return result;
 };
