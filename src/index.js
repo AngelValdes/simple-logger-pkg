@@ -35,3 +35,21 @@ module.exports.debug = (message, level) => {
     }
     return result;
 };
+module.exports.versionUp = function versionUp(current, type) { //expected usage: logger.versionUp("1.0.2", "Major")
+    var result;
+    var arrayOfNumbers = current.split('.');
+    switch (type) {
+        case 'Major':
+            result = String(parseInt(arrayOfNumbers[0]) + 1) + "." + arrayOfNumbers[1] + "." + arrayOfNumbers[2];
+            break;
+        case 'Minor':
+            result = arrayOfNumbers[0] + "." + String(parseInt(arrayOfNumbers[1]) + 1) + "." + arrayOfNumbers[2];
+            break;
+        case 'Patch':
+            result = arrayOfNumbers[0] + "." + arrayOfNumbers[1] + "." + String(parseInt(arrayOfNumbers[2]) + 1);
+            break;
+        default:
+            result = "Invalid input arguments";
+    }
+    return result;
+};
